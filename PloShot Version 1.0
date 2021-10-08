@@ -1,3 +1,7 @@
+-- NEWER PLOSHOT
+
+-- Instances:
+
 local Ploshot = Instance.new("ScreenGui")
 local MainFrame = Instance.new("Frame")
 local UICorner = Instance.new("UICorner")
@@ -11,6 +15,12 @@ local Tower2Btn = Instance.new("TextButton")
 local TextButton_Roundify_12px_3 = Instance.new("ImageLabel")
 local Tower3Btn = Instance.new("TextButton")
 local TextButton_Roundify_12px_4 = Instance.new("ImageLabel")
+local LandGrass1 = Instance.new("TextButton")
+local TextButton_Roundify_12px_5 = Instance.new("ImageLabel")
+local LandGrass2 = Instance.new("TextButton")
+local TextButton_Roundify_12px_6 = Instance.new("ImageLabel")
+local LandGrass3 = Instance.new("TextButton")
+local TextButton_Roundify_12px_7 = Instance.new("ImageLabel")
 local TextLabel = Instance.new("TextLabel")
 local FrameScripts = Instance.new("Frame")
 local UICorner_3 = Instance.new("UICorner")
@@ -26,8 +36,10 @@ local UICorner_4 = Instance.new("UICorner")
 local Text = Instance.new("TextLabel")
 local Text_2 = Instance.new("TextLabel")
 local Text_3 = Instance.new("TextLabel")
-local ps = game:GetService("Players")
-local lp = ps.LocalPlayer
+local CloseBtn = Instance.new("TextButton")
+local TeleportBtn_Roundify_7px_4 = Instance.new("ImageLabel")
+local OpenBtn = Instance.new("TextButton")
+local TeleportBtn_Roundify_7px_5 = Instance.new("ImageLabel")
 
 --Properties:
 
@@ -40,7 +52,6 @@ MainFrame.Parent = Ploshot
 MainFrame.BackgroundColor3 = Color3.fromRGB(54, 54, 54)
 MainFrame.Position = UDim2.new(0.347834319, 0, 0.331909865, 0)
 MainFrame.Size = UDim2.new(0.303112328, 0, 0.335863382, 0)
-MainFrame.Draggable = true
 
 UICorner.Parent = MainFrame
 
@@ -49,7 +60,6 @@ FrameTeleporters.Parent = MainFrame
 FrameTeleporters.BackgroundColor3 = Color3.fromRGB(83, 83, 83)
 FrameTeleporters.Position = UDim2.new(0.055059433, 0, 0.158192083, 0)
 FrameTeleporters.Size = UDim2.new(0.723214269, 0, 0.768361568, 0)
-FrameTeleporters.Visible = false
 
 UICorner_2.Parent = FrameTeleporters
 
@@ -58,9 +68,10 @@ CabinBtn.Parent = FrameTeleporters
 CabinBtn.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 CabinBtn.BackgroundTransparency = 1.000
 CabinBtn.BorderSizePixel = 0
-CabinBtn.Position = UDim2.new(0.0636942685, 0, 0.125, 0)
-CabinBtn.Size = UDim2.new(0.222222224, 0, 0.0441176482, 0)
+CabinBtn.Position = UDim2.new(0.0636942536, 0, 0.125, 0)
+CabinBtn.Size = UDim2.new(0.222222224, 0, 0.0661764741, 0)
 CabinBtn.ZIndex = 2
+CabinBtn.Modal = true
 CabinBtn.Font = Enum.Font.RobotoCondensed
 CabinBtn.Text = "Cabin"
 CabinBtn.TextColor3 = Color3.fromRGB(188, 188, 188)
@@ -72,9 +83,9 @@ TextButton_Roundify_12px.Active = true
 TextButton_Roundify_12px.AnchorPoint = Vector2.new(0.5, 0.5)
 TextButton_Roundify_12px.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 TextButton_Roundify_12px.BackgroundTransparency = 1.000
-TextButton_Roundify_12px.Position = UDim2.new(0.5, 0, 0.37499997, 0)
+TextButton_Roundify_12px.Position = UDim2.new(0.500000298, 0, 0.416668326, 0)
 TextButton_Roundify_12px.Selectable = true
-TextButton_Roundify_12px.Size = UDim2.new(1.33333337, 0, 3.58333755, 0)
+TextButton_Roundify_12px.Size = UDim2.new(1.33333337, 0, 2.3888917, 0)
 TextButton_Roundify_12px.Image = "rbxassetid://3570695787"
 TextButton_Roundify_12px.ImageColor3 = Color3.fromRGB(95, 95, 95)
 TextButton_Roundify_12px.ScaleType = Enum.ScaleType.Slice
@@ -86,9 +97,10 @@ Tower1Btn.Parent = FrameTeleporters
 Tower1Btn.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Tower1Btn.BackgroundTransparency = 1.000
 Tower1Btn.BorderSizePixel = 0
-Tower1Btn.Position = UDim2.new(0.388338447, 0, 0.117647052, 0)
-Tower1Btn.Size = UDim2.new(0.222222224, 0, 0.0441176482, 0)
+Tower1Btn.Position = UDim2.new(0.388338357, 0, 0.117647059, 0)
+Tower1Btn.Size = UDim2.new(0.222222224, 0, 0.0735294148, 0)
 Tower1Btn.ZIndex = 2
+Tower1Btn.Modal = true
 Tower1Btn.Font = Enum.Font.RobotoCondensed
 Tower1Btn.Text = "Tower 1"
 Tower1Btn.TextColor3 = Color3.fromRGB(188, 188, 188)
@@ -100,9 +112,9 @@ TextButton_Roundify_12px_2.Active = true
 TextButton_Roundify_12px_2.AnchorPoint = Vector2.new(0.5, 0.5)
 TextButton_Roundify_12px_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 TextButton_Roundify_12px_2.BackgroundTransparency = 1.000
-TextButton_Roundify_12px_2.Position = UDim2.new(0.5, 0, 0.37499997, 0)
+TextButton_Roundify_12px_2.Position = UDim2.new(0.5, 0, 0.474999964, 0)
 TextButton_Roundify_12px_2.Selectable = true
-TextButton_Roundify_12px_2.Size = UDim2.new(1.33333337, 0, 3.58333755, 0)
+TextButton_Roundify_12px_2.Size = UDim2.new(1.33299994, 0, 2.38899994, 0)
 TextButton_Roundify_12px_2.Image = "rbxassetid://3570695787"
 TextButton_Roundify_12px_2.ImageColor3 = Color3.fromRGB(95, 95, 95)
 TextButton_Roundify_12px_2.ScaleType = Enum.ScaleType.Slice
@@ -115,8 +127,9 @@ Tower2Btn.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Tower2Btn.BackgroundTransparency = 1.000
 Tower2Btn.BorderSizePixel = 0
 Tower2Btn.Position = UDim2.new(0.707399547, 0, 0.125, 0)
-Tower2Btn.Size = UDim2.new(0.222222224, 0, 0.0441176482, 0)
+Tower2Btn.Size = UDim2.new(0.222222224, 0, 0.0661764741, 0)
 Tower2Btn.ZIndex = 2
+Tower2Btn.Modal = true
 Tower2Btn.Font = Enum.Font.RobotoCondensed
 Tower2Btn.Text = "Tower 2"
 Tower2Btn.TextColor3 = Color3.fromRGB(188, 188, 188)
@@ -128,9 +141,9 @@ TextButton_Roundify_12px_3.Active = true
 TextButton_Roundify_12px_3.AnchorPoint = Vector2.new(0.5, 0.5)
 TextButton_Roundify_12px_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 TextButton_Roundify_12px_3.BackgroundTransparency = 1.000
-TextButton_Roundify_12px_3.Position = UDim2.new(0.5, 0, 0.37499997, 0)
+TextButton_Roundify_12px_3.Position = UDim2.new(0.5, 0, 0.486111075, 0)
 TextButton_Roundify_12px_3.Selectable = true
-TextButton_Roundify_12px_3.Size = UDim2.new(1.33333337, 0, 3.58333755, 0)
+TextButton_Roundify_12px_3.Size = UDim2.new(1.33299994, 0, 2.38899994, 0)
 TextButton_Roundify_12px_3.Image = "rbxassetid://3570695787"
 TextButton_Roundify_12px_3.ImageColor3 = Color3.fromRGB(95, 95, 95)
 TextButton_Roundify_12px_3.ScaleType = Enum.ScaleType.Slice
@@ -142,9 +155,10 @@ Tower3Btn.Parent = FrameTeleporters
 Tower3Btn.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Tower3Btn.BackgroundTransparency = 1.000
 Tower3Btn.BorderSizePixel = 0
-Tower3Btn.Position = UDim2.new(0.0592514053, 0, 0.375, 0)
-Tower3Btn.Size = UDim2.new(0.222222224, 0, 0.0441176482, 0)
+Tower3Btn.Position = UDim2.new(0.0592513531, 0, 0.375, 0)
+Tower3Btn.Size = UDim2.new(0.222000003, 0, 0.074000001, 0)
 Tower3Btn.ZIndex = 2
+Tower3Btn.Modal = true
 Tower3Btn.Font = Enum.Font.RobotoCondensed
 Tower3Btn.Text = "Tower 3"
 Tower3Btn.TextColor3 = Color3.fromRGB(188, 188, 188)
@@ -156,14 +170,101 @@ TextButton_Roundify_12px_4.Active = true
 TextButton_Roundify_12px_4.AnchorPoint = Vector2.new(0.5, 0.5)
 TextButton_Roundify_12px_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 TextButton_Roundify_12px_4.BackgroundTransparency = 1.000
-TextButton_Roundify_12px_4.Position = UDim2.new(0.5, 0, 0.37499997, 0)
+TextButton_Roundify_12px_4.Position = UDim2.new(0.5, 0, 0.474364042, 0)
 TextButton_Roundify_12px_4.Selectable = true
-TextButton_Roundify_12px_4.Size = UDim2.new(1.33333337, 0, 3.58333755, 0)
+TextButton_Roundify_12px_4.Size = UDim2.new(1.33299994, 0, 2.38899994, 0)
 TextButton_Roundify_12px_4.Image = "rbxassetid://3570695787"
 TextButton_Roundify_12px_4.ImageColor3 = Color3.fromRGB(95, 95, 95)
 TextButton_Roundify_12px_4.ScaleType = Enum.ScaleType.Slice
 TextButton_Roundify_12px_4.SliceCenter = Rect.new(100, 100, 100, 100)
 TextButton_Roundify_12px_4.SliceScale = 0.120
+
+LandGrass1.Name = "LandGrass#1"
+LandGrass1.Parent = FrameTeleporters
+LandGrass1.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+LandGrass1.BackgroundTransparency = 1.000
+LandGrass1.BorderSizePixel = 0
+LandGrass1.Position = UDim2.new(0.38774538, 0, 0.375, 0)
+LandGrass1.Size = UDim2.new(0.222000003, 0, 0.074000001, 0)
+LandGrass1.ZIndex = 2
+LandGrass1.Modal = true
+LandGrass1.Font = Enum.Font.RobotoCondensed
+LandGrass1.Text = "Land #1"
+LandGrass1.TextColor3 = Color3.fromRGB(188, 188, 188)
+LandGrass1.TextSize = 14.000
+
+TextButton_Roundify_12px_5.Name = "TextButton_Roundify_12px"
+TextButton_Roundify_12px_5.Parent = LandGrass1
+TextButton_Roundify_12px_5.Active = true
+TextButton_Roundify_12px_5.AnchorPoint = Vector2.new(0.5, 0.5)
+TextButton_Roundify_12px_5.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextButton_Roundify_12px_5.BackgroundTransparency = 1.000
+TextButton_Roundify_12px_5.Position = UDim2.new(0.5, 0, 0.474364042, 0)
+TextButton_Roundify_12px_5.Selectable = true
+TextButton_Roundify_12px_5.Size = UDim2.new(1.33299994, 0, 2.38899994, 0)
+TextButton_Roundify_12px_5.Image = "rbxassetid://3570695787"
+TextButton_Roundify_12px_5.ImageColor3 = Color3.fromRGB(95, 95, 95)
+TextButton_Roundify_12px_5.ScaleType = Enum.ScaleType.Slice
+TextButton_Roundify_12px_5.SliceCenter = Rect.new(100, 100, 100, 100)
+TextButton_Roundify_12px_5.SliceScale = 0.120
+
+LandGrass2.Name = "LandGrass#2"
+LandGrass2.Parent = FrameTeleporters
+LandGrass2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+LandGrass2.BackgroundTransparency = 1.000
+LandGrass2.BorderSizePixel = 0
+LandGrass2.Position = UDim2.new(0.703843355, 0, 0.375, 0)
+LandGrass2.Size = UDim2.new(0.222000003, 0, 0.074000001, 0)
+LandGrass2.ZIndex = 2
+LandGrass2.Modal = true
+LandGrass2.Font = Enum.Font.RobotoCondensed
+LandGrass2.Text = "Land #2"
+LandGrass2.TextColor3 = Color3.fromRGB(188, 188, 188)
+LandGrass2.TextSize = 14.000
+
+TextButton_Roundify_12px_6.Name = "TextButton_Roundify_12px"
+TextButton_Roundify_12px_6.Parent = LandGrass2
+TextButton_Roundify_12px_6.Active = true
+TextButton_Roundify_12px_6.AnchorPoint = Vector2.new(0.5, 0.5)
+TextButton_Roundify_12px_6.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextButton_Roundify_12px_6.BackgroundTransparency = 1.000
+TextButton_Roundify_12px_6.Position = UDim2.new(0.5, 0, 0.474364042, 0)
+TextButton_Roundify_12px_6.Selectable = true
+TextButton_Roundify_12px_6.Size = UDim2.new(1.33299994, 0, 2.38899994, 0)
+TextButton_Roundify_12px_6.Image = "rbxassetid://3570695787"
+TextButton_Roundify_12px_6.ImageColor3 = Color3.fromRGB(95, 95, 95)
+TextButton_Roundify_12px_6.ScaleType = Enum.ScaleType.Slice
+TextButton_Roundify_12px_6.SliceCenter = Rect.new(100, 100, 100, 100)
+TextButton_Roundify_12px_6.SliceScale = 0.120
+
+LandGrass3.Name = "LandGrass#3"
+LandGrass3.Parent = FrameTeleporters
+LandGrass3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+LandGrass3.BackgroundTransparency = 1.000
+LandGrass3.BorderSizePixel = 0
+LandGrass3.Position = UDim2.new(0.0592513196, 0, 0.639705896, 0)
+LandGrass3.Size = UDim2.new(0.222000003, 0, 0.074000001, 0)
+LandGrass3.ZIndex = 2
+LandGrass3.Modal = true
+LandGrass3.Font = Enum.Font.RobotoCondensed
+LandGrass3.Text = "Land #3"
+LandGrass3.TextColor3 = Color3.fromRGB(188, 188, 188)
+LandGrass3.TextSize = 14.000
+
+TextButton_Roundify_12px_7.Name = "TextButton_Roundify_12px"
+TextButton_Roundify_12px_7.Parent = LandGrass3
+TextButton_Roundify_12px_7.Active = true
+TextButton_Roundify_12px_7.AnchorPoint = Vector2.new(0.5, 0.5)
+TextButton_Roundify_12px_7.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextButton_Roundify_12px_7.BackgroundTransparency = 1.000
+TextButton_Roundify_12px_7.Position = UDim2.new(0.5, 0, 0.474364042, 0)
+TextButton_Roundify_12px_7.Selectable = true
+TextButton_Roundify_12px_7.Size = UDim2.new(1.33299994, 0, 2.38899994, 0)
+TextButton_Roundify_12px_7.Image = "rbxassetid://3570695787"
+TextButton_Roundify_12px_7.ImageColor3 = Color3.fromRGB(95, 95, 95)
+TextButton_Roundify_12px_7.ScaleType = Enum.ScaleType.Slice
+TextButton_Roundify_12px_7.SliceCenter = Rect.new(100, 100, 100, 100)
+TextButton_Roundify_12px_7.SliceScale = 0.120
 
 TextLabel.Parent = MainFrame
 TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -211,6 +312,7 @@ TeleportersBtn.BorderSizePixel = 0
 TeleportersBtn.Position = UDim2.new(0.816931307, 0, 0.152542353, 0)
 TeleportersBtn.Size = UDim2.new(0.441964298, 0, 0.0790960416, 0)
 TeleportersBtn.ZIndex = 2
+TeleportersBtn.Modal = true
 TeleportersBtn.Font = Enum.Font.RobotoCondensed
 TeleportersBtn.Text = "Teleporters"
 TeleportersBtn.TextColor3 = Color3.fromRGB(255, 255, 255)
@@ -241,6 +343,7 @@ ScriptsBtn.BorderSizePixel = 0
 ScriptsBtn.Position = UDim2.new(0.816931307, 0, 0.305084705, 0)
 ScriptsBtn.Size = UDim2.new(0.441964298, 0, 0.0790960416, 0)
 ScriptsBtn.ZIndex = 2
+ScriptsBtn.Modal = true
 ScriptsBtn.Font = Enum.Font.RobotoCondensed
 ScriptsBtn.Text = "Scripts"
 ScriptsBtn.TextColor3 = Color3.fromRGB(255, 255, 255)
@@ -271,6 +374,7 @@ CreditsBtn.BorderSizePixel = 0
 CreditsBtn.Position = UDim2.new(0.816931307, 0, 0.457627118, 0)
 CreditsBtn.Size = UDim2.new(0.441964298, 0, 0.0790960416, 0)
 CreditsBtn.ZIndex = 2
+CreditsBtn.Modal = true
 CreditsBtn.Font = Enum.Font.RobotoCondensed
 CreditsBtn.Text = "Credit"
 CreditsBtn.TextColor3 = Color3.fromRGB(255, 255, 255)
@@ -299,6 +403,7 @@ FrameCredits.BackgroundColor3 = Color3.fromRGB(83, 83, 83)
 FrameCredits.BackgroundTransparency = 0.250
 FrameCredits.Position = UDim2.new(0.055059433, 0, 0.158192083, 0)
 FrameCredits.Size = UDim2.new(0.723214269, 0, 0.768361568, 0)
+FrameCredits.Visible = false
 
 UICorner_4.Parent = FrameCredits
 
@@ -344,40 +449,160 @@ Text_3.TextSize = 13.000
 Text_3.TextStrokeColor3 = Color3.fromRGB(184, 184, 184)
 Text_3.TextWrapped = true
 
+CloseBtn.Name = "CloseBtn"
+CloseBtn.Parent = MainFrame
+CloseBtn.BackgroundColor3 = Color3.fromRGB(44, 44, 44)
+CloseBtn.BackgroundTransparency = 1.000
+CloseBtn.BorderSizePixel = 0
+CloseBtn.Position = UDim2.new(0.816931307, 0, 0.604519725, 0)
+CloseBtn.Size = UDim2.new(0.441964298, 0, 0.0790960416, 0)
+CloseBtn.ZIndex = 2
+CloseBtn.Modal = true
+CloseBtn.Font = Enum.Font.RobotoCondensed
+CloseBtn.Text = "Close"
+CloseBtn.TextColor3 = Color3.fromRGB(255, 255, 255)
+CloseBtn.TextScaled = true
+CloseBtn.TextSize = 13.000
+CloseBtn.TextWrapped = true
+
+TeleportBtn_Roundify_7px_4.Name = "TeleportBtn_Roundify_7px"
+TeleportBtn_Roundify_7px_4.Parent = CloseBtn
+TeleportBtn_Roundify_7px_4.Active = true
+TeleportBtn_Roundify_7px_4.AnchorPoint = Vector2.new(0.5, 0.5)
+TeleportBtn_Roundify_7px_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TeleportBtn_Roundify_7px_4.BackgroundTransparency = 1.000
+TeleportBtn_Roundify_7px_4.Position = UDim2.new(0.5, 0, 0.464285702, 0)
+TeleportBtn_Roundify_7px_4.Selectable = true
+TeleportBtn_Roundify_7px_4.Size = UDim2.new(0.99999994, 0, 1.5000006, 0)
+TeleportBtn_Roundify_7px_4.Image = "rbxassetid://3570695787"
+TeleportBtn_Roundify_7px_4.ImageColor3 = Color3.fromRGB(139, 22, 22)
+TeleportBtn_Roundify_7px_4.ScaleType = Enum.ScaleType.Slice
+TeleportBtn_Roundify_7px_4.SliceCenter = Rect.new(100, 100, 100, 100)
+TeleportBtn_Roundify_7px_4.SliceScale = 0.070
+
+OpenBtn.Name = "OpenBtn"
+OpenBtn.Parent = Ploshot
+OpenBtn.BackgroundColor3 = Color3.fromRGB(44, 44, 44)
+OpenBtn.BackgroundTransparency = 1.000
+OpenBtn.BorderSizePixel = 0
+OpenBtn.Position = UDim2.new(0.0163043477, 0, 0.476243883, 0)
+OpenBtn.Size = UDim2.new(0.149844751, 0, 0.0297970884, 0)
+OpenBtn.ZIndex = 2
+OpenBtn.Modal = true
+OpenBtn.Font = Enum.Font.RobotoCondensed
+OpenBtn.Text = "Open"
+OpenBtn.TextColor3 = Color3.fromRGB(255, 255, 255)
+OpenBtn.TextScaled = true
+OpenBtn.TextSize = 13.000
+OpenBtn.TextWrapped = true
+OpenBtn.Visible = false
+
+TeleportBtn_Roundify_7px_5.Name = "TeleportBtn_Roundify_7px"
+TeleportBtn_Roundify_7px_5.Parent = OpenBtn
+TeleportBtn_Roundify_7px_5.Active = true
+TeleportBtn_Roundify_7px_5.AnchorPoint = Vector2.new(0.5, 0.5)
+TeleportBtn_Roundify_7px_5.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TeleportBtn_Roundify_7px_5.BackgroundTransparency = 1.000
+TeleportBtn_Roundify_7px_5.Position = UDim2.new(0.5, 0, 0.464285702, 0)
+TeleportBtn_Roundify_7px_5.Selectable = true
+TeleportBtn_Roundify_7px_5.Size = UDim2.new(0.99999994, 0, 1.5000006, 0)
+TeleportBtn_Roundify_7px_5.Image = "rbxassetid://3570695787"
+TeleportBtn_Roundify_7px_5.ImageColor3 = Color3.fromRGB(30, 139, 22)
+TeleportBtn_Roundify_7px_5.ScaleType = Enum.ScaleType.Slice
+TeleportBtn_Roundify_7px_5.SliceCenter = Rect.new(100, 100, 100, 100)
+TeleportBtn_Roundify_7px_5.SliceScale = 0.070
+
+local ps = game:GetService("Players")
+local lp = ps.LocalPlayer
+local db = true
+
 CabinBtn.MouseButton1Click:Connect(function()
-	local cabinPos = "-177.934, 64.343, -26.924"
-	lp.Character.HumanoidRootPart.CFrame = cabinPos
+	if db == true then
+		db = false
+		lp.Character.HumanoidRootPart.CFrame = CFrame.new(-177.934, 64.343, -26.924)
+		wait(0.25)
+		db = true
+	end
 end)
 
 Tower1Btn.MouseButton1Click:Connect(function()
-	local Tower1Pos = "55.291, 115.356, -35.789"
-	lp.Character.HumanoidRootPart.CFrame = Tower1Pos
+	if db == true then
+		db = false
+		lp.Character.HumanoidRootPart.CFrame = CFrame.new(55.291, 115.356, -35.789)
+		wait(0.25)
+		db = true
+	end
 end)
 
 Tower2Btn.MouseButton1Click:Connect(function()
-	local Tower2Pos = "60.947, 116.516, 187.469"
-	lp.Character.HumanoidRootPart.CFrame = Tower2Pos
+	if db == true then
+		db = false
+		lp.Character.HumanoidRootPart.CFrame = CFrame.new(60.947, 116.516, 187.469)
+		wait(0.25)
+		db = true
+	end
 end)
 
 Tower3Btn.MouseButton1Click:Connect(function()
-	local Tower3Pos = "-432.104, 89.176, -16.13"
-	lp.Character.HumanoidRootPart.CFrame = Tower3Pos
+	if db == true then
+		db = false
+		lp.Character.HumanoidRootPart.CFrame = CFrame.new(-432.104, 89.176, -16.13)
+		wait(0.25)
+		db = true
+	end
+end)
+
+LandGrass1.MouseButton1Click:Connect(function()
+	if db == true then
+		db = false
+		lp.Character.HumanoidRootPart.CFrame = CFrame.new(-99.175, 68.04, 93.008)
+		wait(0.25)
+		db = true
+	end
+end)
+
+LandGrass2.MouseButton1Click:Connect(function()
+	if db == true then
+		db = false
+		lp.Character.HumanoidRootPart.CFrame = CFrame.new(-230.514, 76.74, 51.029)
+		wait(0.25)
+		db = true
+	end
+end)
+
+LandGrass3.MouseButton1Click:Connect(function()
+	if db == true then
+		db = false
+		lp.Character.HumanoidRootPart.CFrame = CFrame.new(-82.528, 62.141, -47.296)
+		wait(0.25)
+		db = true
+	end
 end)
 
 CreditsBtn.MouseButton1Click:Connect(function()
-	MainFrame.FrameCredits.Visable = true
-	MainFrame.FrameScripts.Visable = false
-	MainFrame.FrameTeleporters.Visable = false
+	MainFrame.FrameCredits.Visible = true
+	MainFrame.FrameScripts.Visible = false
+	MainFrame.FrameTeleporters.Visible = false
 end)
 
 ScriptsBtn.MouseButton1Click:Connect(function()
-	MainFrame.FrameCredits.Visable = false
-	MainFrame.FrameScripts.Visable = true
-	MainFrame.FrameTeleporters.Visable = false
+	MainFrame.FrameCredits.Visible = false
+	MainFrame.FrameScripts.Visible = true
+	MainFrame.FrameTeleporters.Visible = false
 end)
 
 TeleportersBtn.MouseButton1Click:Connect(function()
-	MainFrame.FrameCredits.Visable = false
-	MainFrame.FrameScripts.Visable = false
-	MainFrame.FrameTeleporters.Visable = true
+	MainFrame.FrameCredits.Visible = false
+	MainFrame.FrameScripts.Visible = false
+	MainFrame.FrameTeleporters.Visible = true
+end)
+
+CloseBtn.MouseButton1Click:Connect(function()
+	MainFrame.Visible = false
+	OpenBtn.Visible = true
+end)
+
+OpenBtn.MouseButton1Click:Connect(function()
+	MainFrame.Visible = true
+	OpenBtn.Visible = false
 end)
